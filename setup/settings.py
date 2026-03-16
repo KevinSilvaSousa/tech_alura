@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-SITE_ID = 1
+SITE_ID = 2
 
 
 # Application definition
@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'django.contrib.sites',
-
 ]
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -141,9 +140,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SOCIALACCOUNT_PROVIDERS = {
     'github': {
         'APP': {
-            'client_id': '1Ov23liVQlajAuC0XpmEB23',
-            'secret': '48605e91398b3d3b4bf0a85dd8b2d24e89e04ee7956',
+            'client_id': 'Ov23liVQlajAuC0XpmEB',
+            'secret': '13e091ac380fd255813fd1d36e28e9a215d69a65',
             'key': ''
         }
     }
 }
+
+
+LOGIN_REDIRECT_URL = '/members'
+
+SOCIALACCOUNT_LOGIN_ON_GET = True
+
+ACCOUNT_LOGOUT_ON_GET = True
+
+LOGOUT_RREDIRECT_URL = '/'
